@@ -32,9 +32,8 @@ The state consists of two continuous variables:
 - Car position
 - Car velocity
 
-\[
-s = (\text{position}, \text{velocity})
-\]
+State representation: s = (position, velocity)
+
 
 ### 🔹 Action Space
 The agent can choose one of the following actions:
@@ -63,14 +62,13 @@ Tabular Q-learning stores expected rewards for each **state–action pair** in a
 Because MountainCar has a continuous state space, states are discretized into bins.
 
 #### Q-Learning Update Rule
-\[
-Q(s, a) \leftarrow Q(s, a) + \alpha
-\left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
-\]
+
+Q(s, a) ← Q(s, a) + α [ r + γ maxₐ′ Q(s′, a′) − Q(s, a) ]
 
 Where:
-- \( \alpha \) = learning rate
-- \( \gamma \) = discount factor
+- α = learning rate
+- γ = discount factor
+
 
 #### Limitations
 - Requires discretization
